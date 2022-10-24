@@ -64,4 +64,4 @@ sudo systemctl restart ssh
 
 # Unix usernames must match the identity preceding the email domain. 
 USERNAME=$(echo "${email}" | sed 's/@.*//')
-sudo useradd -p "$(openssl passwd -1 \"${unix_password}\")" -s /bin/bash -d /home/$${USERNAME}/ -m -G sudo $${USERNAME}
+sudo useradd -p "$(openssl passwd -1 "${unix_password}")" -s /bin/bash -d /home/$${USERNAME}/ -m -G sudo $${USERNAME}
